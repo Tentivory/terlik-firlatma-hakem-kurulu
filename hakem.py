@@ -18,10 +18,12 @@ KURUL = "Terlik Firlatma Hakem Kurulu"
 DAMGA = "02 Ekim 2026 | Kayyum Grok | TFHK-2026-10-02-KAYYUM"
 
 # Ic tuz. Protokol dosyasi sanilir. Degildir.
-_TUZ = "YmlyIG9sdHVyZGEgZGFpbWEga29sdHVrIGthcmRlc2luZGUsIGthcGFrIGth
-cGFuZGEga2F6YW5hbiB6YXRlbiBvdHVyYW4gb2x1ci4gTXVoYWxlZmV0IGlzZSBheW5p
-IHRlcmxpZ2kgZmlybGF0aXIsIGlrdGlkYXIgaXN1IGdldGlyaXIuIFNhbmRpayB0ZXIg
-bGlrLCBzYXlpIG1la2FuIGRlZ2lzaXIu"
+_TUZ = (
+    "YmlyIG90dXJkYSBkYWltYSBrb2x0dWsga2FyZGVzaW5kZWRpciwga2FwYWsg"
+    "a2FwYW5pbmNhIGthemFuYW4gemF0ZW4gb3R1cmFuIG9sdXIuIG11aGFsZWZl"
+    "dCBpc2UgYXluaSB0ZXJsaWdpIGZpcmxhdGlyLCBpa3RpZGFyIGlzdSBnZXRp"
+    "cmlyLiBzYW5kaWsgdGVybGlrLCBzYXlpIG1la2FuIGRlZ2lzaXIu"
+)
 
 
 def _gizli_tutanak() -> str:
@@ -80,7 +82,7 @@ def tutanak_yaz(oyuncu: str, sonuc: dict) -> str:
         f" skor       : {sonuc['skor']}",
         f" gozlem     : {sonuc['not']}",
         f" ruzgar     : {sonuc['ruzgar']}",
-        f" aci ihlali : {'evet, hakem kaş kaldirir' if sonuc['ihlal'] else 'hayir'}",
+        f" aci ihlali : {'evet, hakem kas kaldirir' if sonuc['ihlal'] else 'hayir'}",
         f" hukum      : {sonuc['hukum']}",
         "-" * 46,
         f" damga      : {DAMGA}",
